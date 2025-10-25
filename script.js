@@ -4,11 +4,11 @@ class Person {
 		this.name = myName;
 		this.age = myAge;
 	}
-	getName(){
+	get modifiedName(){
 		return this.name; 
 	}
-	setAge(newAge){
-		this.age = newAge;
+	set newAge(age){
+		this.age = age;
 		return this.age;
 	}
 }
@@ -32,6 +32,15 @@ class Teacher extends Person {
 		return this.name + " is teaching";
 	}
 }
+const person = new Person ("John", 25);
+console.log(person.modifiedName);
+person.newAge = 30;
+console.log(person.newAge);
+const student = new Student ("Alice", 22);
+console.log(student.study());
+const teacher = new Teacher ("Bob", 40);
+console.log(teacher.teach());
+
 
 // Do not change the code below this line
 window.Person = Person;
